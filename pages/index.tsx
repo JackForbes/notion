@@ -1,118 +1,32 @@
-import Head from 'next/head';
-import { generateRSS } from '../rssUtil';
-import { Markdown } from '../components/Markdown';
-import { PostData, loadBlogPosts, loadMarkdownFile } from '../loader';
-import { PostCard } from '../components/PostCard';
+import React from 'react';
+import Image from 'next/image';
+import { Meta } from '../components/Meta';
+import { InstitutionSearch } from '../components/InstitutionSearch';
 
-const Home = (props: {
-  introduction: string;
-  features: string;
-  readme: string;
-  posts: PostData[];
-}) => {
+const Home = () => {
+  const meta = {
+    title: 'Notion Take Home',
+  };
+
   return (
-    <div className="content">
-      <Head>
-        <title>Introducing Devii</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="mw--md m-horizontal--auto p-around--large">
+      <Meta meta={meta} />
 
-      <div className="introduction">
-        <h1>Introduction to Devii</h1>
-        <Markdown source={props.introduction} />
-      </div>
-
-      <div className="section">
-        <h2>Features</h2>
-        <div className="medium-wide">
-          <Markdown source={props.features} />
+      <section className="layout-gt-xs-row layout-align-center-center">
+        <div className="ta-center--lt-sm flex-order-gt-xs-2">
+          <Image alt="Caspar David Friedrich on a mountain" height={384} priority src="/img/home-hero.png" width={384} />
         </div>
-      </div>
-
-      <div className="section">
-        <h2>My blog posts</h2>
-        <p>
-          This section demonstrates the power of dynamic imports. Every Markdown
-          file under <code>/md/blog</code> is automatically parsed into a
-          structured TypeScript object and available in the{' '}
-          <code>props.posts</code> array. These blog post "cards" are
-          implemented in the
-          <code>/components/PostCard.tsx</code> component.
-        </p>
-        <div className="post-card-container">
-          {props.posts.map((post, j) => {
-            return <PostCard post={post} key={j} />;
-          })}
+        <div className="mw--560 m-top--large-lt-sm m-right--xx-large-gt-xs">
+          <h1>Find the university that’s right for you.</h1>
+          <p className="m-top--large">Tenetur ex explicabo et illo. Recusandae fugit eius voluptatem. Voluptas atque autem totam.</p>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
-        <h2>Testimonials</h2>
-        <blockquote>
-          <p>
-            <em>Seems like it might be useful!</em>
-          </p>
-          <p>
-            — Dan Abramov, taken{' '}
-            <a
-              href="https://github.com/colinhacks/devii/issues/2"
-              target="_blank"
-            >
-              {' '}
-              utterly out of context
-            </a>
-          </p>
-        </blockquote>
-      </div>
-
-      {/* <div className="section">
-        <h2>README.md</h2>
-        <p>
-          Below is the README.md for devii. It was imported and rendered using
-          Next.js dynamic imports. The rest of this page (including this
-          paragraph) are rendered with React. You can also read the README on
-          GitHub at{' '}
-          <a href="https://github.com/colinhacks/devii">
-            https://github.com/colinhacks/devii
-          </a>
-          .
-        </p>
-      </div> */}
-
-      {/* <div className="section alternate">
-        <div className="narrow">
-          <Markdown source={props.readme} />
-        </div>
-      </div> */}
-
-      <div className="section alternate">
-        <h2 className="centered">Get started</h2>
-        <a href="https://github.com/colinhacks/devii">
-          <button className="fork-button">Go to README</button>
-        </a>
-      </div>
+      <section className="m-top--xxx-large">
+        <InstitutionSearch />
+      </section>
     </div>
   );
 };
 
 export default Home;
-
-export const getStaticProps = async () => {
-  const introduction = await loadMarkdownFile('introduction.md');
-  const features = await loadMarkdownFile('features.md');
-  const readmeFile = await import(`../${'README.md'}`);
-  const readme = readmeFile.default;
-  const posts = await loadBlogPosts();
-
-  // comment out to turn off RSS generation during build step.
-  await generateRSS(posts);
-
-  const props = {
-    introduction: introduction.contents,
-    features: features.contents,
-    readme: readme,
-    posts,
-  };
-
-  return { props };
-};

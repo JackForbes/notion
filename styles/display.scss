@@ -1,0 +1,140 @@
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.block {
+  display: block;
+}
+
+.block-xs {
+  @include xs {
+    display: block !important;
+  }
+}
+
+.block-sm {
+  @include sm {
+    display: block !important;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.hide-xs {
+  @include xs {
+    display: none !important;
+  }
+}
+
+.hide-gt-xs {
+  @include gt-xs {
+    display: none !important;
+  }
+}
+
+.hide-sm {
+  @include sm {
+    display: none !important;
+  }
+}
+
+.hide-xs-sm {
+  @include xs-sm {
+    display: none !important;
+  }
+}
+
+.hide-gt-sm {
+  @include gt-sm {
+    display: none !important;
+  }
+}
+
+.hide-gt-md {
+  @include gt-md {
+    display: none !important;
+  }
+}
+
+.hide-lt-lg {
+  @include md {
+    display: none !important;
+  }
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-center--lt-sm {
+  @include xs {
+    text-align: center;
+  }
+}
+
+.ta-center--sm {
+  @include sm {
+    text-align: center;
+  }
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.ta-right--gt-sm {
+  @include gt-sm {
+    text-align: right;
+  }
+}
+
+.ta-right--gt-xs {
+  @include gt-xs {
+    text-align: right;
+  }
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-x-scroll-xs {
+  @include xs {
+    overflow-x: scroll;
+  }
+}

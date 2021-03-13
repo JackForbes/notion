@@ -1,0 +1,17 @@
+input,
+textarea {
+  appearance: none;
+}
+
+input {
+  // Fixes mobile IOS weird border shadows: https://zomigi.com/blog/bug-fixes-for-removing-the-inner-shadow-on-ios-inputs/
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(0,0%,100%,0)), to(hsla(0,0%,100%,0)));
+  background-image:-webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+  border: $input-border-width solid $gray-1;
+  border-radius: $input-border-radius;
+  padding: $default-spacing * .5 $default-spacing * .75;
+
+  @include placeholder-color {
+    color: $white-transparent;
+  }
+}

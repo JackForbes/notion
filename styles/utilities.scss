@@ -1,0 +1,121 @@
+html, body, #app, .page-wrapper, .app-wrapper {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  color: $black;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-behavior: smooth;
+}
+
+::selection, ::-moz-selection {
+  background: $blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: $default-spacing * .5 0 0 0;
+}
+
+button,
+input,
+select {
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+mark {
+  display: inline-block;
+  background-color: $blue;
+  color: $black;
+}
+
+ul li {
+  margin-top: $default-spacing * .5;
+  list-style-image: url($image-url + 'svg/bullet.svg');
+
+  &.default-list-style {
+    list-style: initial;
+  }
+}
+
+ul, ol {
+  padding-left: $default-spacing * 1.5;
+}
+
+ol li {
+  padding-left: $default-spacing * .5;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.list-style-upper-alpha {
+  list-style: upper-alpha;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+.rotate-transition {
+  display: inline-block;
+  transition: transform $transition-duration $cubic-bezier-button;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
+}
+
+.box-shadow {
+  box-shadow: $box-shadow;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}

@@ -1,0 +1,203 @@
+// Colors
+$cherry: #E16259;
+$hue-0: #6D1C40;
+$hue-1: #9B3060;
+$hue-2: #DABECA;
+
+$black: #000000;
+$gray-0: rgba(0,0,0,0.6);
+$gray-1: #EEEEEE;
+$gray-2: #D8D4CE;
+$gray-2-transparent: rgba($gray-2, .5);
+$gray-3: #F7F4F1;
+$white: #FFFDFB;
+$white-transparent: rgba(0, 0, 0, 0.4);
+
+$red: #AA3428;
+$light-pink: #FFDDDD;
+$green: #62865F;
+$light-green: #CBE2C9;
+$orange: #E38F3D;
+$pink: #FF8E87;
+$light-blue: #E9F3F4;
+$blue: #D0E8EC;
+$navy: #1A2B40;
+$peacock-blue: #007195;
+$yellow: #FFB300;
+$light-yellow: #FFEABA;
+
+$facebook-color: #3B5998;
+$facebook-color-hover: #4568B2;
+$messenger-color: #0080FF;
+$messenger-color-hover: #0084FF;
+$twitter-color: #059FF5;
+$twitter-color-hover: #1DA1F2;
+$linkedin-color: #0077b5;
+$dribbble-color: #EA4C89;
+$google-color: #4081ED;
+
+
+// Color classes
+.cherry {
+  color: $cherry;
+}
+.hue-0 {
+  color: $hue-0;
+}
+.hue-1 {
+  color: $hue-1;
+}
+.hue-2 {
+  color: $hue-2;
+}
+.black {
+  color: $black;
+}
+.gray-0 {
+  color: $gray-0;
+}
+.gray-1 {
+  color: $gray-1;
+}
+.gray-2 {
+  color: $gray-2;
+}
+.white {
+  color: $white;
+}
+.blue {
+  color: $blue;
+}
+.light-blue {
+  color: $light-blue;
+}
+.red {
+  color: $red;
+}
+.green {
+  color: $green;
+}
+.orange {
+  color: $orange;
+}
+.navy {
+  color: $navy;
+}
+.peacock-blue {
+  color: $peacock-blue;
+}
+.yellow {
+  color: $yellow;
+}
+.light-yellow {
+  color: $light-yellow;
+}
+.facebook-color {
+  color: $facebook-color;
+}
+.linkedin-color {
+  color: $linkedin-color;
+}
+.twitter-color {
+  color: $twitter-color;
+}
+.dribbble-color {
+  color: $dribbble-color;
+}
+.transparent {
+  color: transparent;
+}
+.bg--transparent {
+  background-color: transparent;
+}
+.bg--black {
+  background-color: $black;
+}
+.bg--gray-0 {
+  background-color: $gray-0;
+}
+.bg--gray-1 {
+  background-color: $gray-1;
+}
+.bg--gray-2 {
+  background-color: $gray-2;
+}
+.bg--gray-3 {
+  background-color: $gray-3;
+}
+.bg--white {
+  background-color: $white;
+}
+.bg--white-transparent {
+  background-color: $white-transparent;
+}
+.bg--cherry {
+  background-color: $cherry;
+}
+.bg--hue-0 {
+  background-color: $hue-0;
+}
+.bg--hue-1 {
+  background-color: $hue-1;
+}
+.bg--blue {
+  background-color: $blue;
+}
+.bg--navy {
+  background-color: $navy;
+}
+.bg--peacock-blue {
+  background-color: $peacock-blue;
+}
+.bg--red {
+  background-color: $red;
+}
+.bg--light-pink {
+  background-color: $light-pink;
+}
+.bg--green {
+  background-color: $green;
+}
+.bg--light-green {
+  background-color: $light-green;
+}
+.bg--yellow {
+  background-color: $yellow;
+}
+.bg--light-yellow {
+  background-color: $light-yellow;
+}
+.bg--orange {
+  background-color: $orange;
+}
+.bg--light-blue {
+  background-color: $light-blue;
+}
+.tag-waiting, .tag-created, .tag-pending, .tag-processing, .tag-refund_processing, .tag-pre_processing, .tag-refunded {
+  color: $white;
+  background-color: $orange;
+}
+.tag-failed {
+  color: $white;
+  background-color: $red;
+}
+.tag-succeeded, .tag-paid {
+  color: $white;
+  background-color: $green;
+}
+.tag-gray {
+  color: $black;
+  background-color: $gray-2;
+}
+.tag-light-blue {
+  color: $black;
+  background-color: $light-blue;
+}
+.tag-blue {
+  color: $black;
+  background-color: $blue;
+}
+.tag-white {
+  color: $black;
+  background-color: $white;
+}

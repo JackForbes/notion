@@ -1,0 +1,264 @@
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
+}
+@keyframes slideRight {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  100% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  100% {
+    transform: translate3d(-160px, 0px, 0px);
+  }
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 100px, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes typing {
+  0%,
+  100%,
+  40%,
+  60% {
+    width: 100%;
+  }
+
+  48%, 52% {
+    width: 1%;
+  }
+}
+@keyframes textSlide {
+  0%,
+  100%,
+  25%,
+  75% {
+    transform: translate3d(0,0,0);
+  }
+
+  26%,
+  74% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes skate {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  32% {
+    transform: translate3d(40vw, 0, 0) rotateY(0deg);
+  }
+
+  36% {
+    transform: translate3d(40vw, 0, 0) rotateY(180deg);
+  }
+
+  60% {
+    transform: translate3d(20vw, 0, 0) rotateY(180deg);
+  }
+
+  64% {
+    transform: translate3d(20vw, 0, 0) rotateY(0deg);
+  }
+
+  100% {
+    transform: translate3d(100vw, 0, 0) rotateY(0deg);
+  }
+}
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -750px 0;
+  }
+
+  100% {
+    background-position: 750px 0;
+  }
+}
+@keyframes housemateFinderLineDraw {
+  0% {
+    bottom: calc(100% - #{$default-spacing * 5});
+  }
+
+  100% {
+    bottom: 12%;
+  }
+}
+@keyframes scaleUpFadeIn {
+  0% {
+    transform: scale(.6);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ballPulseSync {
+  33% {
+    transform: translateY($default-spacing * .25);
+  }
+  66% {
+    transform: translateY(-$default-spacing * .25);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes ballPulseSyncLarge {
+  33% {
+    transform: translateY($default-spacing * .5);
+  }
+  66% {
+    transform: translateY(-$default-spacing * .5);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes scrollIndicatorBounce {
+	 0% {
+     transform: rotate(90deg) translateX(0);
+   }
+	 50% {
+     transform: rotate(90deg) translateX($default-spacing);
+   }
+	 100% {
+     transform: rotate(90deg) translateX(0);
+   }
+}
+@keyframes float1 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float2 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float3 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float4 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float5 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float6 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float7 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}
+@keyframes float8 {
+	0% {
+    transform: translate(0px,0px);
+	}
+	25% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	75% {
+		transform: translate(#{randomNum(-10, 10)}px,#{randomNum(-10, 10)}px);
+	}
+	100% {
+		transform: translate(0px,0px);
+	}
+}

@@ -1,0 +1,764 @@
+//  Generated Variables
+// =======================
+
+$widthClass: w--;
+$heightClass: h--;
+$gtXsClass: -gt-xs;
+
+//  Generated Widths
+// =======================
+
+// .w--{size} from 16px to 352px
+@for $i from 1 through 22 {
+  .#{$widthClass}#{16 * $i} {
+    width: $default-spacing * $i;
+  }
+}
+// .w--{size}-gt-xs from 16px to 352px
+@for $i from 1 through 22 {
+  .#{$widthClass}#{16 * $i}#{$gtXsClass} {
+    @include gt-xs {
+      width: $default-spacing * $i;
+    }
+  }
+}
+
+//  Other Widths
+// =======================
+
+.w--auto {
+  width: auto;
+}
+
+.w--expandable {
+  width: auto;
+  height: 100%;
+}
+
+.w--24 {
+  width: 24px;
+}
+
+.w--72 {
+  width: 72px;
+}
+
+.w--192-gt-sm {
+  @include gt-sm {
+    width: 192px;
+  }
+}
+
+.w--600 {
+  width: 600px;
+}
+
+.w--600-gt-xs {
+  @include gt-xs {
+    width: 600px;
+  }
+}
+
+.w--50p {
+  width: 50%;
+}
+
+.w--50p-gt-xs {
+  @include gt-xs {
+    width: 50%;
+  }
+}
+
+.w--65p-gt-xs {
+  @include gt-xs {
+    width: 65%;
+  }
+}
+
+.w--90p-gt-sm {
+  @include gt-sm {
+    width: 90%;
+  }
+}
+
+.w--100p {
+  width: 100%;
+}
+
+.w--100p-xs {
+  @include xs {
+    width: 100%;
+  }
+}
+
+.w--100p-lt-sm {
+  @include xs {
+    width: 100%;
+  }
+}
+
+.w--100p-lt-md {
+  @include sm {
+    width: 100%;
+  }
+}
+
+.w--100p-gt-xs {
+  @include gt-xs {
+    width: 100%;
+  }
+}
+
+.w--100p-gt-sm {
+  @include gt-sm {
+    width: 100%;
+  }
+}
+
+//  Generated Heights
+// =======================
+
+// .h--{size} from 16px to 160px
+@for $i from 1 through 10 {
+  .#{$heightClass}#{16 * $i} {
+    height: 16px * $i;
+  }
+}
+
+//  Other Heights
+// =======================
+
+.h--auto {
+  height: auto;
+}
+
+.h--inherit {
+  height: inherit;
+}
+
+.h--100p {
+  height: 100%;
+}
+
+.h--100p-minus-header-account-bar {
+  @include xs {
+    // Note: See this article for why using this variable for the vh
+    // to achieve this is needed. https://css-tricks.com/the-trick-to-viewport-units-on-mobile
+    height: calc((var(--mobile-vh, 1vh) * 100) - #{$site-nav-height-lt-sm + $account-tabs-height-lt-md});
+  }
+  @include xs-sm {
+    height: calc((var(--mobile-vh, 1vh) * 100) - #{$site-nav-height-gt-xs + $account-tabs-height-lt-md});
+  }
+  @include gt-sm {
+    height: calc(100vh - #{$site-nav-height-gt-xs + $account-tabs-height-gt-sm});
+  }
+}
+
+.h--3 {
+  height: 3px;
+}
+
+.h--12 {
+  height: 12px;
+}
+
+.h--20 {
+  height: 20px;
+}
+
+.h--24 {
+  height: 24px;
+}
+
+.h--32-gt-xs {
+  @include gt-xs {
+    width: auto;
+    height: 32px;
+  }
+}
+
+.h--36 {
+  height: 36px;
+}
+
+.h--48-gt-xs {
+  @include gt-xs {
+    height: 48px;
+  }
+}
+
+.h--54 {
+  height: 54px;
+}
+
+.h--72 {
+  height: 72px;
+}
+
+.h--96-gt-sm {
+  @include gt-sm {
+    width: auto;
+    height: 96px;
+  }
+}
+
+.h--176-gt-xs {
+  @include gt-xs {
+    height: 176px;
+  }
+}
+
+.h--240 {
+  height: 240px;
+}
+
+.h--800 {
+  height: 800px;
+}
+
+//  Other Sizes (miw, mw, mh, mih, etc.)
+// =======================
+
+.miw--auto {
+  min-width: auto;
+}
+
+.miw--0 {
+  min-width: 0;
+}
+
+.miw--24 {
+  min-width: 24px;
+}
+
+.miw--32 {
+  min-width: 32px;
+}
+
+.miw--36 {
+  min-width: 36px;
+}
+
+.miw--48 {
+  min-width: 48px;
+}
+
+.miw--48-gt-xs {
+  @include gt-xs {
+    min-width: 48px;
+  }
+}
+
+.miw--72 {
+  min-width: 72px;
+}
+
+.miw--96 {
+  min-width: 96px;
+}
+
+.miw--120 {
+  min-width: 120px;
+}
+
+.miw--128 {
+  min-width: 128px;
+}
+
+.miw--132 {
+  min-width: 132px;
+}
+
+.miw--144 {
+  min-width: 144px;
+}
+
+.miw--176 {
+  min-width: 176px;
+}
+
+.miw--240 {
+  min-width: 240px;
+}
+
+.miw--240-gt-xs {
+  @include gt-xs {
+    min-width: 240px;
+  }
+}
+
+.miw--288 {
+  min-width: 288px;
+}
+
+.miw--352-gt-xs {
+  @include gt-xs {
+    min-width: 352px;
+  }
+}
+
+.miw--368-gt-md {
+  @include gt-md {
+    min-width: 368px;
+  }
+}
+
+.miw--512-gt-xs {
+  @include gt-xs {
+    min-width: 512px;
+  }
+}
+
+.miw--520-gt-xs {
+  @include gt-xs {
+    min-width: 520px;
+  }
+}
+
+.mw--60p {
+  max-width: 60%;
+}
+
+.mw--70p {
+  max-width: 70%;
+}
+
+.mw--80p {
+  max-width: 80%;
+}
+
+.mw--90p-gt-xs {
+  @include gt-xs {
+    max-width: 90%;
+  }
+}
+
+.mw--100p {
+  max-width: 100%;
+}
+
+.mw--100p-lt-sm {
+  @include xs {
+    max-width: 100%;
+  }
+}
+
+.mw--100p-gt-sm {
+  @include gt-sm {
+    max-width: 100%;
+  }
+}
+
+.mw--24 {
+  max-width: 24px;
+}
+
+.mw--80 {
+  max-width: 80px;
+}
+
+.mw--128 {
+  max-width: 128px;
+}
+
+.mw--160 {
+  max-width: 160px;
+}
+
+.mw--176 {
+  max-width: 176px;
+}
+
+.mw--176 {
+  max-width: 176px;
+}
+
+.mw--176-gt-xs {
+  @include gt-xs {
+    max-width: 176px;
+  }
+}
+
+.mw--192-gt-xs {
+  @include gt-xs {
+    max-width: 192px;
+  }
+}
+
+.mw--186 {
+  max-width: 186px;
+}
+
+.mw--208 {
+  max-width: 208px;
+}
+
+.mw--208-gt-xs {
+  @include gt-xs {
+    max-width: 208px;
+  }
+}
+
+.mw--224-gt-xs {
+  @include gt-xs {
+    max-width: 224px;
+  }
+}
+
+.mw--240 {
+  max-width: 240px;
+}
+
+.mw--240-gt-xs {
+  @include gt-xs {
+    max-width: 240px;
+  }
+}
+
+.mw--288 {
+  max-width: 288px;
+}
+
+.mw--288-gt-xs {
+  @include gt-xs {
+    max-width: 288px;
+  }
+}
+
+.mw--320 {
+  max-width: 320px;
+}
+
+.mw--352 {
+  max-width: 352px;
+}
+
+.mw--352-gt-xs {
+  @include gt-xs {
+    max-width: 352px;
+  }
+}
+
+.mw--384 {
+  max-width: 384px;
+}
+
+.mw--384-gt-xs {
+  @include gt-xs {
+    max-width: 384px;
+  }
+}
+
+.mw--384-gt-sm {
+  @include gt-sm {
+    max-width: 384px;
+  }
+}
+
+.mw--432 {
+  max-width: 432px;
+}
+
+.mw--464 {
+  max-width: 464px;
+}
+
+.mw--480 {
+  max-width: 480px;
+}
+
+.mw--496 {
+  max-width: 496px;
+}
+
+.mw--500 {
+  max-width: 500px;
+}
+
+.mw--512 {
+  max-width: 512px;
+}
+
+.mw--528 {
+  max-width: 528px;
+}
+
+.mw--560 {
+  max-width: 560px;
+}
+
+.mw--560-gt-sm {
+  @include gt-sm {
+    max-width: 560px;
+  }
+}
+
+.mw--576 {
+  max-width: 576px;
+}
+
+.mw--660 {
+  max-width: 660px;
+}
+
+.mw--704 {
+  max-width: 704px;
+}
+
+.mw--720 {
+  max-width: 720px;
+}
+
+.mw--768 {
+  max-width: 768px;
+}
+
+.mw--780 {
+  max-width: 780px;
+}
+
+.mw--1024 {
+  max-width: 1024px;
+}
+
+.mw--md {
+  max-width: $md-width;
+}
+
+.mih--100p {
+  min-height: 100%;
+}
+
+.mih--100vh {
+  min-height: 100vh;
+}
+
+.mih--96 {
+  min-height: 96px;
+}
+
+.mih--160 {
+  min-height: 160px;
+}
+
+.mih--192 {
+  min-height: 192px;
+}
+
+.mih--250 {
+  min-height: 250px;
+}
+
+.mih--384 {
+  min-height: 384px;
+}
+
+.mih--420 {
+  min-height: 420px;
+}
+
+.mih--500 {
+  min-height: 500px;
+}
+
+.mih--532 {
+  min-height: 532px;
+}
+
+.mih--600 {
+  min-height: 600px;
+}
+
+.mh--0 {
+  max-height: 0;
+}
+
+.mh--24 {
+  max-height: 24px;
+}
+
+.mh--32 {
+  max-height: 32px;
+}
+
+.mh--32-gt-xs {
+  @include gt-xs {
+    max-height: 32px;
+  }
+}
+
+.mh--48 {
+  max-height: 48px;
+}
+
+.mh--48-gt-xs {
+  @include gt-xs {
+    max-height: 48px;
+  }
+}
+
+.mh--64 {
+  max-height: 64px;
+}
+
+.mh--88 {
+  max-height: 88px;
+}
+
+.mh--150 {
+  max-height: 150px;
+}
+
+.mh--400 {
+  max-height: 400px;
+}
+
+.mh--500 {
+  max-height: 500px;
+}
+
+.mh--600 {
+  max-height: 600px;
+}
+
+.mh--700 {
+  max-height: 600px;
+}
+
+.mh--100p {
+  max-height: 100%;
+}
+
+//  Square Classes
+// =======================
+
+.square--24 {
+  width: 24px;
+  height: 24px;
+}
+
+.square--20 {
+  width: 20px;
+  height: 20px;
+}
+
+.square--26 {
+  width: 26px;
+  height: 26px;
+}
+
+.square--30 {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.square--32 {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.square--36 {
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+}
+
+.square--42 {
+  min-width: 42px;
+  width: 42px;
+  height: 42px;
+}
+
+.square--48 {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.square--56 {
+  width: 56px;
+  height: 56px;
+}
+
+.square--64 {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.square--72 {
+  width: 48px;
+  height: 48px;
+  @include gt-xs {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.square--96 {
+  width: 96px;
+  height: 96px;
+}
+
+.square--112 {
+  width: 112px;
+  height: 112px;
+}
+
+.square--128 {
+  width: 128px;
+  height: 128px;
+}
+
+.square--144 {
+  width: 112px;
+  height: 112px;
+  @include gt-xs {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.square--144 {
+  width: 144px;
+  height: 144px;
+}
+
+.square--160 {
+  width: 128px;
+  height: 128px;
+  @include gt-xs {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.square--176 {
+  width: 96px;
+  height: 96px;
+  @include gt-xs {
+    width: 176px;
+    height: 176px;
+  }
+}
+
+.square--250 {
+  width: 125px;
+  height: 125px;
+  @include gt-xs {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.square--288 {
+  width: 288px;
+  height: 288px;
+}
+
+.one-one {
+  @include aspect-ratio(1,1);
+}

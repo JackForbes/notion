@@ -1,0 +1,95 @@
+@mixin xs {
+  @media (max-width: #{$xs-width - 1}) {
+    @content;
+  }
+}
+@mixin gt-xs {
+  @media (min-width: #{$xs-width}) {
+    @content;
+  }
+}
+@mixin xs-sm {
+  @media (min-width: #{$xs-width}) and (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: #{$sm-width - 1}) {
+    @content;
+  }
+}
+@mixin gt-sm {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+@mixin sm-md {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: #{$md-width - 1}) {
+    @content;
+  }
+}
+@mixin gt-md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+@mixin gt-lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+@mixin grid-sm-md {
+  @media (min-width: #{$grid-sm-width}) and (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+@mixin profile-listing-resize {
+  @media (min-width: #{$profile-listing-resize + 1px}) {
+    @content;
+  }
+}
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content, .carousel, .slider-wrapper, .slider {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@mixin placeholder-color {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

@@ -1,0 +1,61 @@
+// Image Base Url
+$image-url: 'https://static-images.kopa.co/';
+
+// Spacing
+$default-spacing: 16px;
+$body-line-height: 26px;
+
+// Transitions
+$transition-duration-sm: .15s;
+$transition-duration: .3s;
+$reveal-duration: .3s;
+$transition-delay: .15s;
+$animation-duration: .3s;
+$animation-delay: .6s;
+$linear: linear;
+$ease-in-out: ease-in-out;
+$ease-out: ease-out;
+$cubic-bezier: cubic-bezier(.35,0,.25,1);
+$cubic-bezier-button: cubic-bezier(.25,.8,.25,1);
+
+// Shadows
+$box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+
+// Blur
+$default-blur: 6px;
+
+// Opacity
+$transparent: .2;
+$opaque: .8;
+
+// Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$input-border-radius: 4px;
+$button-border-radius: 12px;
+
+// Border widths
+$input-border-width: 2px;
+
+// Screen sizes
+$xs-width: 600px;
+$sm-width: 960px;
+$md-width: 1280px;
+$lg-width: 1920px;
+$grid-sm-width: 850px;
+$profile-listing-resize: 1100px;
+$about-chart-width: 1112px;
+
+// Element sizes
+$site-nav-height-lt-sm: 72px;
+$site-nav-height-gt-xs: 80px;
+$search-filters-height-lt-sm: 161px;
+$search-filters-height-gt-xs: 81px;
+$account-tabs-height-lt-md: 48px;
+$account-tabs-height-gt-sm: 65px;
+$input-height: 48px;
+$checkbox-size: 16px;
+$checkbox-text-spacing: 12px;
+$checkbox-border-width: 2px;
+$button-height: 48px;

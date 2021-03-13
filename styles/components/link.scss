@@ -1,0 +1,20 @@
+a {
+  color: $cherry;
+  cursor: pointer;
+  text-decoration: none;
+
+  &.disabled {
+    opacity: $transparent;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(.hover-none):not(.active):not(.button):hover {
+    text-decoration: underline;
+  }
+}
