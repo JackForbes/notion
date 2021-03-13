@@ -1,6 +1,6 @@
 # Notion Frontend Take Home
 By Jack Forbes
-[Visit the deployed build here](https://notion-beryl.vercel.app)
+[Visit the deployed build here](https://notion-jackforbes.vercel.app)
 
 
 ### Built with the latest.
@@ -107,4 +107,4 @@ Creates an optimized build of your site. Equivalent to `next build`.
 
 ### `yarn export`
 
-Exports the site to static files. All files are written to `/out` and updated [on Vercel](https://notion-beryl.vercel.app).
+Exports the site to static files. All files are written to `/out` and updated [on Vercel](https://notion-jackforbes.vercel.app).
