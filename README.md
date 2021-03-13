@@ -1,5 +1,6 @@
-# Notion Frontend Take home
+# Notion Frontend Take Home
 By Jack Forbes
+[Visit the deployed build here](https://notion-beryl.vercel.app)
 
 
 ### Built with the latest.
@@ -88,8 +89,6 @@ View `/loader.ts` to see how this works.
 
 You can generate a fully static version of the site using `yarn build && yarn export`. This step is entirely powered by Next.js. The static site is exported to the `out` directory.
 
-After it's generated, it's deployed with Firebase Hosting.
-
 
 ## SEO
 
@@ -108,4 +107,4 @@ Creates an optimized build of your site. Equivalent to `next build`.
 
 ### `yarn export`
 
-Exports your site to static files. All files are written to `/out`. Use your static file hosting service of choice (Firebase Hosting, Amazon S3, Vercel) to deploy your site. Equivalent to `next export`.
+Exports the site to static files. All files are written to `/out` and updated [on Vercel](https://notion-beryl.vercel.app).
